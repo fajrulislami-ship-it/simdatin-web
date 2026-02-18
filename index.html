@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>SIMDATIN | Layanan PDDikti</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Favicon UPI -->
+<link rel="icon" href="assets/img/logo-upi.png" type="image/png">
+
+<style>
+/* GENERAL */
+body{
+  font-family:'Inter',sans-serif;
+  background:radial-gradient(circle at top left,#0f172a,#020617);
+  color:#e5e7eb;
+  overflow-x:hidden;
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-size:2.6rem;
+  font-weight:900;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  background:linear-gradient(90deg,#38bdf8,#a78bfa,#f472b6);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:
+    0 0 25px rgba(99,102,241,.45),
+    0 0 45px rgba(236,72,153,.25);
+}
+
+/* NAVBAR */
+.navbar{
+  backdrop-filter:blur(14px);
+  background:rgba(15,23,42,.65);
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+/* NAVBAR LINKS HOVER */
+.navbar .nav-link:hover{
+  color:#fff;
+  text-shadow: 0 0 12px #60a5fa, 0 0 20px #f472b6;
+  transition: all 0.3s ease;
+}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%,rgba(59,130,246,.35),transparent 40%),
+    radial-gradient(circle at 80% 60%,rgba(236,72,153,.35),transparent 40%);
+  z-index:-1;
+}
+
+.hero h1{
+  font-size:3.5rem;
+  font-weight:900;
+  background:linear-gradient(90deg,#60a5fa,#f472b6,#facc15);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  max-width:650px;
+  opacity:.9;
+}
+
+/* LOGO BORDER */
+.hero .hero-logos img{
+  height:80px;
+  border:2px solid #fff;
+  border-radius:12px;
+}
+
+/* 3D CARDS */
+.card-3d{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:22px;
+  backdrop-filter:blur(18px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.2);
+  transition:.4s ease;
+}
+
+.card-3d:hover{
+  transform:translateY(-12px) rotateX(6deg) rotateY(-6deg);
+  box-shadow:
+    0 40px 90px rgba(0,0,0,.7),
+    0 0 30px rgba(99,102,241,.4);
+}
+
+/* STATISTIC */
+.stat-number{
+  font-size:2.6rem;
+  font-weight:800;
+}
+
+/* BUTTON */
+.btn-glow{
+  background:linear-gradient(135deg,#6366f1,#ec4899);
+  border:none;
+  color:#fff;
+  box-shadow:0 0 25px rgba(99,102,241,.6);
+}
+
+.btn-glow:hover{
+  box-shadow:0 0 45px rgba(236,72,153,.9);
+}
+
+/* FOOTER */
+footer{
+  background:#020617;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center">
+      <img src="assets/img/logo-upi.png" height="34" class="me-2">
+      <span class="text-warning">SIMDATIN</span>
+    </a>
+
+    <div class="ms-auto d-flex gap-3">
+      <a class="nav-link text-light" href="index.html">Beranda</a>
+      <a class="nav-link text-light" href="layanan.html">Layanan</a>
+      <a class="nav-link text-light" href="sop.html">SOP</a>
+      <a class="btn btn-sm btn-glow" href="login.html">Login</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container text-center">
+    <div class="d-flex justify-content-center gap-4 mb-4 hero-logos">
+      <img src="assets/img/logo-upi.png">
+      <img src="assets/img/logo-pddikti.png">
+    </div>
+
+    <h1>BIRO DATA DAN INFORMASI</h1>
+    <p class="mx-auto mt-3">
+      Sistem Informasi Manajemen Data & Informasi layanan PDDikti.
+    </p>
+
+    <a href="layanan.html" class="btn btn-glow btn-lg px-5 mt-4">
+      Mulai Akses Layanan
+    </a>
+  </div>
+</section>
+
+<!-- STATISTIK -->
+<section class="container my-5">
+  <div class="row g-4 text-center">
+    <div class="col-md-4">
+      <div class="card-3d p-4">
+        <i class="bi bi-diagram-3 fs-1 text-info"></i>
+        <div class="stat-number">12</div>
+        <small>Layanan Aktif</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-3d p-4">
+        <i class="bi bi-person-check fs-1 text-success"></i>
+        <div class="stat-number">3.250</div>
+        <small>Mahasiswa Tercatat</small>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-3d p-4">
+        <i class="bi bi-cloud-check fs-1 text-warning"></i>
+        <div class="stat-number">Online</div>
+        <small>Status Sinkron Feeder</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section class="container my-5">
+  <h3 class="text-center mb-5 section-title">
+    Layanan Utama
+  </h3>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="card-3d p-4 h-100">
+        <h6>Perbaikan Data Mahasiswa</h6>
+        <small>Validasi & koreksi data akademik</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-3d p-4 h-100">
+        <h6>Perbaikan Nilai</h6>
+        <small>Sinkronisasi nilai PDDikti</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-3d p-4 h-100">
+        <h6>Mutasi / Cuti / DO</h6>
+        <small>Pengelolaan status mahasiswa</small>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card-3d p-4 h-100">
+        <h6>Neo Feeder</h6>
+        <small>Monitoring & sinkronisasi</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-4 text-center">
+  <small class="text-secondary">
+    © 2026 SIMDATIN – Biro Data & Informasi | Universitas Putra Indonesia YPTK Padang
+  </small>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
